@@ -7,5 +7,6 @@ let RENT = 1
 let MATERIALS = 0.5
 let GOODS_AND_SERVICES_TAX = 1.13
 let diameter_inch_of_pizza = game.askForNumber("Enter the diameter of pizza (inch)")
-let pizza = LABOUR_COST + RENT + MATERIALS * (diameter_inch_of_pizza + GOODS_AND_SERVICES_TAX)
+let pizza = LABOUR_COST + RENT + diameter_inch_of_pizza * MATERIALS
+pizza = pizza * GOODS_AND_SERVICES_TAX
 game.splash("The cost of the pizza is $" + Math.round(pizza * 100) / 100)
